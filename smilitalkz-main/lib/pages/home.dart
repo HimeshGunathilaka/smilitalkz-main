@@ -30,7 +30,7 @@ class HexColor extends Color {
 class Home extends StatefulWidget {
   const Home({super.key});
 
-    @override
+  @override
   _HomeState createState() => _HomeState();
 }
 
@@ -44,8 +44,10 @@ class _HomeState extends State<Home> {
     });
   }
 
-    void showUnregisteredDeviceAlert() {
-    Get.dialog(UnRegPopup(),barrierDismissible: false); // Use GetX's Get.dialog to show your custom dialog
+  void showUnregisteredDeviceAlert() {
+    Get.dialog(UnRegPopup(),
+        barrierDismissible:
+            false); // Use GetX's Get.dialog to show your custom dialog
   }
 
   @override
@@ -54,7 +56,7 @@ class _HomeState extends State<Home> {
     Color btncolor1 = HexColor("#FF948B");
 
     return Scaffold(
-      resizeToAvoidBottomInset: false,
+      resizeToAvoidBottomInset: true,
       backgroundColor: Color.fromARGB(255, 250, 247, 231),
       body: Stack(children: [
         Container(

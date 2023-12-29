@@ -49,6 +49,7 @@ class CustomPasswordField extends StatefulWidget {
     Key? key,
     required this.labelText,
     this.keyboardType = TextInputType.text,
+    required String? Function(dynamic value) validator,
   }) : super(key: key);
 
   @override
@@ -64,7 +65,6 @@ class _CustomPasswordFieldState extends State<CustomPasswordField> {
     super.initState();
     _passwordController = Get.put(PasswordController());
   }
-
 
   @override
   Widget build(BuildContext context) {
